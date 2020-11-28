@@ -3,25 +3,20 @@
 
 Overview
 ---
-In this project, use what you've learned about deep neural networks and convolutional neural networks to classify traffic signs. You will train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, you will then try out your model on images of German traffic signs that you find on the web.
+In this project, use learnings about deep neural networks and convolutional neural networks to classify traffic signs. T
+- Train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). 
+- After the model is trained, try out model on images of German traffic signs found on the web.
+- Based on initial Ipython notebook starter code @ [Ipython notebook](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb). 
+- Detailed writeup created for this project, based on template @ [writeup template](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md).
 
-We have included an Ipython notebook that contains further instructions 
-and starter code. Be sure to download the [Ipython notebook](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb). 
-
-We also want you to create a detailed writeup of the project. Check out the [writeup template](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup. The writeup can be either a markdown file or a pdf document.
-
-To meet specifications, the project will require submitting three files: 
+To meet specifications, the project requires submitting three files: 
 * the Ipython notebook with the code
 * the code exported as an html file
 * a writeup report either as a markdown or pdf file 
-
-Writeup
----
-Writeup should include the [rubric points](https://review.udacity.com/#!/rubrics/481/view) as well as your description of how you addressed each point.  You should include a detailed description of the code used in each step (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  You should include images in your writeup to demonstrate how your code works with examples.  
-
-All that said, please be concise!  We're not looking for you to write a book here, just a brief description of how you passed each rubric point, and references to the relevant code :). 
-
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup.
+* Writeup should include the [rubric points](https://review.udacity.com/#!/rubrics/481/view) + description of how each point is addressed.  
+  - Include a detailed description of the code used in each step (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  
+  - Include images to demonstrate how the code works with examples.  
+  - Need be concise.  Just a brief description of how each rubric point is passed, and references to the relevant code. 
 
 The Project
 ---
