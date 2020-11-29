@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-- Link to my [project code](https://github.com/remichartier/011_selfDrivingCarND_TrafficSignClassifierProject/blob/master/Traffic_Sign_Classifier_v13.ipynb) (Jupyter Notebook)
+- Link to my [project code](https://github.com/remichartier/011_selfDrivingCarND_TrafficSignClassifierProject/blob/master/Traffic_Sign_Classifier_v17.ipynb) (Jupyter Notebook)
 
 ### Data Set Summary & Exploration
 
@@ -117,17 +117,24 @@ I have not explored other ways yet due to time constraints and the need to move 
 | Layer 5: Fully Connected		   | Input = 84. Output = 43.       									|
 |	Dropout					               | keep_prob = 0.75 for training, 1.0 for validation/test, to prevent overfitting. |
 
+- Note : 
+  1. The final Softmax function to finalize the classification and provide probability of each image for the 43 classes (German Traffic Signs) is called later via TensorFlow function `tf.nn.softmax_cross_entropy_with_logits()`
+  2. LeNet() modified to add input parameter `in_channels` to specify number of channels of input images, like 3 for RGB/BRG images, 1 for grayscale images, or it could be 4 for RGBA images.
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
-- Modifications I made from LeNet MNIST model to improve accuracy : 
-  - I added regularization between Fully Connected layers, to prevent overfitting, and only activated during trainings, not for validation or testing phases.
-    - I tested starting from keep_drop = 0.5, first after Layer 5 Fully Connected, then also after Layer 4 and Layer 3 as I saw consistent improvements in accuracy validation results.
-    - I then increase the keep_drop rate from 0.5 to 0.75 as I also saw consistent improvements doing so on accuracy validation performance.
-    - Those steps were enough to go from an accuracy validaton of 0.87 to 0.94/0.95.
-    - I increased number of Epochs from 10 to 20 to keep accuracy validation around 0.94/0.95.
-
-
+- This is covered in my notebook chapter : **"`Training Pipeline`"** as well as **"`Train the Model**"`.
+- To train my model, I took LeNet TensorFlow algorithm previously applied to MNIST, and re-used it entirely for this German Traffic Sign Classifier.
+- I ran it "as is" to check the first validation accuracy I would reach with this reference model, ie I kept : 
+  - The learning rate "'rate = 0.001'"
+  - Using cross entropy to calculate loss.
+  - Kept the Adam optimizer for Gradient Descent.
+  - Batch size of 128.
+  - Number of epochs at 10.
+  - Other hyperparameters like for initializing Weights before running Gradient Descent kept at `mean = 0, stddev = 0.1`. 
+  
+  I recognized that I could have played with all those parameters/choices to improve validation accuracy performance. However, so far, the only parameter I played with in order to reach the minimul test accuracy target of 0.93 was to change the number of epochs from 10 to 20.
+  
+  But I recognize that if I want to explore further improvements, all the other choices/parameters would be available for me to try getting more accuracy improvements, especially optimizing the learning rate, exploring the optimizer other options, changing the Batch size and doing more testing with number of epochs and weight initialization parameters.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -147,7 +154,14 @@ If a well known architecture was chosen:
 * What architecture was chosen?
 * Why did you believe it would be relevant to the traffic sign application?
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
+
+- Modifications I made from LeNet MNIST model to improve accuracy : 
+  - I added regularization between Fully Connected layers, to prevent overfitting, and only activated during trainings, not for validation or testing phases.
+    - I tested starting from keep_drop = 0.5, first after Layer 5 Fully Connected, then also after Layer 4 and Layer 3 as I saw consistent improvements in accuracy validation results.
+    - I then increase the keep_drop rate from 0.5 to 0.75 as I also saw consistent improvements doing so on accuracy validation performance.
+    - Those steps were enough to go from an accuracy validaton of 0.87 to 0.94/0.95.
+    - I increased number of Epochs from 10 to 20 to keep accuracy validation around 0.94/0.95.
+
 
 ### Test a Model on New Images
 
