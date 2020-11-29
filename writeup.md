@@ -89,7 +89,7 @@ Here is an example of a traffic sign image before and after grayscaling, which I
 
 ![alt text][image2]
 
-I have not explored other ways yet due to time constraints and the need to move forward in the ND lectures.
+I have not explored other ways yet due to time constraints and the need to move forward in the course lectures.
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
