@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-- Link to my [project code](https://github.com/remichartier/011_selfDrivingCarND_TrafficSignClassifierProject/blob/master/Traffic_Sign_Classifier_v13.ipynb)
+- Link to my [project code](https://github.com/remichartier/011_selfDrivingCarND_TrafficSignClassifierProject/blob/master/Traffic_Sign_Classifier_v13.ipynb) (Jupyter Notebook)
 
 ### Data Set Summary & Exploration
 
