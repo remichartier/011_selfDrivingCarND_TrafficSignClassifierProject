@@ -117,7 +117,10 @@ I have not explored other ways yet due to time constraints and the need to move 
 | Layer 5: Fully Connected		   | Input = 84. Output = 43.       									|
 |	Dropout					               | keep_prob = 0.75 for training, 1.0 for validation/test, to prevent overfitting. |
 
-- Modifications I made to improve accuracy : 
+
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+
+- Modifications I made from LeNet MNIST model to improve accuracy : 
   - I added regularization between Fully Connected layers, to prevent overfitting, and only activated during trainings, not for validation or testing phases.
     - I tested starting from keep_drop = 0.5, first after Layer 5 Fully Connected, then also after Layer 4 and Layer 3 as I saw consistent improvements in accuracy validation results.
     - I then increase the keep_drop rate from 0.5 to 0.75 as I also saw consistent improvements doing so on accuracy validation performance.
@@ -125,9 +128,6 @@ I have not explored other ways yet due to time constraints and the need to move 
     - I increased number of Epochs from 10 to 20 to keep accuracy validation around 0.94/0.95.
 
 
-#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
-To train the model, I used an ....
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
