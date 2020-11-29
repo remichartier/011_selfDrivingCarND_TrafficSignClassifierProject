@@ -17,7 +17,7 @@ The goals / steps of this project are the following:
 
 [image1]: ./writeup_images/0001_labelHistogram.png "Visualization"
 [image2]: ./writeup_images/0002_gray_conversion.png "Grayscaling"
-[image3]: ./writeup_images/0003_pixelValuesNormalization "Normalization"
+[image3]: ./writeup_images/0003_pixelValuesNormalization.png "Normalization"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
 [image5]: ./examples/placeholder.png "Traffic Sign 2"
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
