@@ -96,7 +96,6 @@ I have not explored other ways yet due to time constraints and the need to move 
 
 - My Model is covered in my notebook in chapter : **"`Model Architecture`"**
 - It is based on LeNet Model seen in the course, adapted to input images (3 channels when RGB or BGR, 1 channel if taking Grayscale images like in the course) and adapted to classify 43 classes (43 different German Traffic Sign) instead of 10 classes from LeNet MNIST model.
-- 
 - It consists of the following layers:
 
 | Layer         		    |     Description	        					            | 
@@ -117,6 +116,13 @@ I have not explored other ways yet due to time constraints and the need to move 
 |	Dropout					               | keep_prob = 0.75 for training, 1.0 for validation/test, to prevent overfitting. |
 | Layer 5: Fully Connected		   | Input = 84. Output = 43.       									|
 |	Dropout					               | keep_prob = 0.75 for training, 1.0 for validation/test, to prevent overfitting. |
+
+- Modifications I made to improve accuracy : 
+  - I added regularization between Fully Connected layers, to prevent overfitting, and only activated during trainings, not for validation or testing phases.
+    - I tested starting from keep_drop = 0.5, first after Layer 5 Fully Connected, then also after Layer 4 and Layer 3 as I saw consistent improvements in accuracy validation results.
+    - I then increase the keep_drop rate from 0.5 to 0.75 as I also saw consistent improvements doing so on accuracy validation performance.
+    - Those steps were enough to go from an accuracy validaton of 0.87 to 0.94/0.95.
+    - I increased number of Epochs from 10 to 20 to keep accuracy validation around 0.94/0.95.
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
