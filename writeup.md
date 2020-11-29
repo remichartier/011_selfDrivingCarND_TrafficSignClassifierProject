@@ -160,9 +160,18 @@ Test Accuracy = 0.939
 ```
 
 Iterative approach followed :
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
+* I started with the TensorFlow course LeNet implementation for MNIST classification, just adapting input images channels (1-->3) and classes output (10-->43).
+* I chose to keep with this LeNet implementation as it worked well for number images, and thought that it could be a good base to start classifying Traffic Sign images, with some adaptations if necessary.
+* This reference model could only reach a Validation Accuracy of 0.87
+* I then looked at further improvement paths, one of which being to try to regularize data in order to avoid overfitting. One of the most promizing approach is to use Dropout strategy, consisting of dropping out some logits in fully connected layers, to prevent neural network to fit systematically on those logits run after run and optimize over a different set of logits at every step.
+  - I only activated this Dropout Regularization technique during trainings, not for validation or testing phases ie `keep_drop rate < 1` for trainings, and `keep_drop rate = 1` for validation or test.
+    - I tested starting from `keep_drop = 0.5`, first after Layer 5 Fully Connected, then also after Layer 4 and Layer 3 as I saw consistent improvements in accuracy validation results.
+    - I then increase the `keep_drop` rate from 0.5 to 0.75 as I also saw consistent improvements doing so on accuracy validation performance.
+    - Those steps were enough to go from an accuracy validaton of 0.87 to 0.94/0.95.
+* I also increased number of Epochs from 10 to 20 to keep accuracy validation around 0.94/0.95.
+
+
+How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
 * Which parameters were tuned? How were they adjusted and why?
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
