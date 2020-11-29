@@ -94,7 +94,7 @@ I have not explored other ways yet due to time constraints and the need to move 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-- My Model is covered in my notebook in chapter : **"`Model Architecture`"**
+- My Model code is covered in my notebook in chapter : **"`Model Architecture`"**
 - It is based on LeNet Model seen in the course, adapted to input images (3 channels when RGB or BGR, 1 channel if taking Grayscale images like in the course) and adapted to classify 43 classes (43 different German Traffic Sign) instead of 10 classes from LeNet MNIST model.
 - It consists of the following layers:
 
@@ -122,7 +122,7 @@ I have not explored other ways yet due to time constraints and the need to move 
   2. LeNet() modified to add input parameter `in_channels` to specify number of channels of input images, like 3 for RGB/BRG images, 1 for grayscale images, or it could be 4 for RGBA images.
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-- This is covered in my notebook chapter : **"`Training Pipeline`"** as well as **"`Train the Model**"`.
+- This code is covered in my notebook chapter : **"`Training Pipeline`"** as well as **"`Train the Model`"**.
 - To train my model, I took LeNet TensorFlow algorithm previously applied to MNIST, and re-used it entirely for this German Traffic Sign Classifier.
 - I ran it "as is" to check the first validation accuracy I would reach with this reference model, ie I kept : 
   - The learning rate "'rate = 0.001'"
@@ -132,16 +132,18 @@ I have not explored other ways yet due to time constraints and the need to move 
   - Number of epochs at 10.
   - Other hyperparameters like for initializing Weights before running Gradient Descent kept at `mean = 0, stddev = 0.1`. 
   
-  I recognized that I could have played with all those parameters/choices to improve validation accuracy performance. However, so far, the only parameter I played with in order to reach the minimul test accuracy target of 0.93 was to change the number of epochs from 10 to 20.
+  I recognize that I could have played with all those parameters/choices to improve validation accuracy performance. However, so far, the only parameter I played with in order to reach the minimul test accuracy target of 0.93 was to change the number of epochs from 10 to 20.
   
   But I recognize that if I want to explore further improvements, all the other choices/parameters would be available for me to try getting more accuracy improvements, especially optimizing the learning rate, exploring the optimizer other options, changing the Batch size and doing more testing with number of epochs and weight initialization parameters.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
+- This code is covered in my notebook chapters **"`Model Evaluation`"** as well as **"`Train the Model`"** as well as **"`Evaluate the Model`"**.
+
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* validation set accuracy of 0.940 
+* test set accuracy of 0.939
+* training set accuracy : 
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
