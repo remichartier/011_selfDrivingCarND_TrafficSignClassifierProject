@@ -34,7 +34,7 @@ Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/4
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-- This is done using code in chapter "Provide a Basic Summary of the Data Set Using Python, Numpy and/or Pandas" from my notebook.
+- This is done using code in chapter "`Provide a Basic Summary of the Data Set Using Python, Numpy and/or Pandas`" from my notebook.
 - I used the numpy library to calculate summary statistics of the traffic signs data set :
   - The size of training set is 34799
   - The size of the validation set is 4410
@@ -44,7 +44,8 @@ Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/4
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data is split accross different German Traffic Sign labels.
+We can see that repartition accross labels is inequal, therefore some Traffic signs have more images to train the classifier (like 1000 to 2000 images) while some Traffic signs have less images (like under 500/250). 
 
 ![alt text][image1]
 
@@ -52,6 +53,15 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
+The normalization steps I took are coded in my notebook in chapter "`Pre-process the Data Set (normalization, grayscale, etc.)`"
+- For preprocessing, the first take I took was to normalize the data/images.
+  - Normalization goal is to transform the data to have 0 mean and equal variant.
+  - It helps convolution algorithm and backpropagation of Gradient Descent to converge faster towards minimizing the loss and finding faster convolution + classifier weights and bias to minimize the loss/error function.
+  - I applied simple normalization in a first step consisting on doing the following on each image pixel : (pixel -128)/128.
+- I did not take any further pre-processing steps as I wanted to see first the results with this normalization, and then come back if I needed more improvements in the classifier pipeline results.
+- Just for testing, I also implemented a grayscale conversion and I modified the code towards that goal, however I did not find any improvements using grayscale conversion so this step is currently disable via a flag in the code : `is_converted_gray`
+  - Depending of this flag, I adjust the channels input of the convolution pipeline, setting 3 channels for color images and 1 for grayscale images.
+  
 As a first step, I decided to convert the images to grayscale because ...
 
 Here is an example of a traffic sign image before and after grayscaling.
