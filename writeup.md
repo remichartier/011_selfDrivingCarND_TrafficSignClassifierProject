@@ -58,6 +58,23 @@ The normalization steps I took are coded in my notebook in chapter **"`Normaliza
   - Normalization goal is to transform the data to have 0 mean and equal variant.
   - It helps convolution algorithm and backpropagation of Gradient Descent to converge faster towards minimizing the loss and finding faster convolution + classifier weights and bias to minimize the loss/error function.
   - I applied simple normalization in a first step consisting on doing the following on each image pixel : (pixel -128)/128. This is a quick way to approximately normalize the data. 
+  - Just to compare before normalization and after normalization, I printed out the pixel average, Image pixel standard deviations vs average, minimum and maximum values of pixels for the X_train dataset.
+    - Before normalisation :
+    ```
+      - Values average/mean : 82.68
+      - Values average standard deviation : 66.82
+      - Mininum value : 0.00
+      - Maximum value : 255.00
+    ```
+    
+    - After normalisation :
+    ```
+      - Values average/mean : -0.35
+      - Values average standard deviation : 0.52
+      - Mininum value : -1.00
+      - Maximum value : 0.99
+    ```
+    
   
   
   
