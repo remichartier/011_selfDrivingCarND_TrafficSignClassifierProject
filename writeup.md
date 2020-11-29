@@ -142,9 +142,9 @@ I have not explored other ways yet due to time constraints and the need to move 
 - Training Set accuracy was not yet implemented in reference LeNet MNIST model I took as a reference, so I added few more lines to include it for the writeup.
 
 My final model results were :
-* validation set accuracy of 0.940 
+* training set accuracy : 0.934
+* validation set accuracy of 0.947 
 * test set accuracy of 0.939
-* training set accuracy : 
 
 Those numbers reflect numbers output from my notebook, for which I can give a snapshot exemple : 
 ```
@@ -155,6 +155,21 @@ EPOCH 2 ...Train Accuracy = 0.849...Validation Accuracy = 0.845
 EPOCH 3 ...Train Accuracy = 0.883...Validation Accuracy = 0.882
 EPOCH 4 ...Train Accuracy = 0.893...Validation Accuracy = 0.891
 EPOCH 5 ...Train Accuracy = 0.909...Validation Accuracy = 0.905
+EPOCH 6 ...Train Accuracy = 0.915...Validation Accuracy = 0.918
+EPOCH 7 ...Train Accuracy = 0.919...Validation Accuracy = 0.916
+EPOCH 8 ...Train Accuracy = 0.925...Validation Accuracy = 0.921
+EPOCH 9 ...Train Accuracy = 0.920...Validation Accuracy = 0.928
+EPOCH 10 ...Train Accuracy = 0.929...Validation Accuracy = 0.926
+EPOCH 11 ...Train Accuracy = 0.932...Validation Accuracy = 0.934
+EPOCH 12 ...Train Accuracy = 0.933...Validation Accuracy = 0.933
+EPOCH 13 ...Train Accuracy = 0.931...Validation Accuracy = 0.927
+EPOCH 14 ...Train Accuracy = 0.936...Validation Accuracy = 0.934
+EPOCH 15 ...Train Accuracy = 0.940...Validation Accuracy = 0.946
+EPOCH 16 ...Train Accuracy = 0.935...Validation Accuracy = 0.936
+EPOCH 17 ...Train Accuracy = 0.937...Validation Accuracy = 0.941
+EPOCH 18 ...Train Accuracy = 0.940...Validation Accuracy = 0.939
+EPOCH 19 ...Train Accuracy = 0.933...Validation Accuracy = 0.935
+EPOCH 20 ...Train Accuracy = 0.934...Validation Accuracy = 0.947
 
 Test Accuracy = 0.939
 ```
