@@ -139,13 +139,27 @@ I have not explored other ways yet due to time constraints and the need to move 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 - This code is covered in my notebook chapters **"`Model Evaluation`"** as well as **"`Train the Model`"** as well as **"`Evaluate the Model`"**.
+- Training Set accuracy was not yet implemented in reference LeNet MNIST model I took as a reference, so I added few more lines to include it for the writeup.
 
-My final model results were:
+My final model results were :
 * validation set accuracy of 0.940 
 * test set accuracy of 0.939
 * training set accuracy : 
 
-If an iterative approach was chosen:
+Those numbers reflect numbers output from my notebook, for which I can give a snapshot exemple : 
+```
+Training...
+
+EPOCH 1 ...Train Accuracy = 0.702...Validation Accuracy = 0.723
+EPOCH 2 ...Train Accuracy = 0.849...Validation Accuracy = 0.845
+EPOCH 3 ...Train Accuracy = 0.883...Validation Accuracy = 0.882
+EPOCH 4 ...Train Accuracy = 0.893...Validation Accuracy = 0.891
+EPOCH 5 ...Train Accuracy = 0.909...Validation Accuracy = 0.905
+
+Test Accuracy = 0.939
+```
+
+Iterative approach followed :
 * What was the first architecture that was tried and why was it chosen?
 * What were some problems with the initial architecture?
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
