@@ -94,9 +94,10 @@ I have not explored other ways yet due to time constraints and the need to move 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-My Model is covered in my notebook on chapter : **"`Model Architecture`"**
-
-It consists of the following layers:
+- My Model is covered in my notebook in chapter : **"`Model Architecture`"**
+- It is based on LeNet Model seen in the course, adapted to input images (3 channels when RGB or BGR, 1 channel if taking Grayscale images like in the course) and adapted to classify 43 classes (43 different German Traffic Sign) instead of 10 classes from LeNet MNIST model.
+- 
+- It consists of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -113,11 +114,9 @@ It consists of the following layers:
 |	Dropout 					|	keep_prob = 0.75 for training, 1.0 for validation/test, to prevent overfitting											|
 | Layer 4: Fully Connected		| Input = 120. Output = 84.        									|
 | Activation 					|	RELU											|
-|	Dropout					|	keep_prob = 0.75, 1.0 for validation/test, to prevent overfitting											|
+|	Dropout					|	keep_prob = 0.75 for training, 1.0 for validation/test, to prevent overfitting											|
 | Layer 5: Fully Connected		| Input = 84. Output = 43.       									|
-|	Dropout					|	keep_prob = 0.75, 1.0 for validation/test, to prevent overfitting											|
-
- 
+|	Dropout					|	keep_prob = 0.75 for training, 1.0 for validation/test, to prevent overfitting											|
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
