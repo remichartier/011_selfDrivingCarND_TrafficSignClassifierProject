@@ -73,7 +73,7 @@ The normalization steps I took are coded in my notebook in chapter **"`Normaliza
       - Mininum value : -1.00
       - Maximum value : 0.99
     ```
-    - So we see that the approximate normalization applied ((pixel -128)/128) still does a good job relatively over the X_train data  to reach a zero mean (82.68 --> -0.35). Not sure it really improve the equalization of the data variance, but at least we slide the dataset more towards a zero mean to help in future steps on gradient descent steps to minimize the loss function.
+    - So we see that the approximate normalization applied ((pixel -128)/128) still does a good job relatively over the X_train data  to reach a zero mean (82.68 --> -0.35). Not sure it really improves the equalization of the data variance, but at least we slide the dataset more towards a zero mean to help in future steps on gradient descent steps to minimize the loss function.
   
   
   
