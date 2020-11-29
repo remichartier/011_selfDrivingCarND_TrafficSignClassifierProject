@@ -60,7 +60,7 @@ The normalization steps I took are coded in my notebook in chapter **"`Normaliza
   - I applied simple normalization in a first step consisting on doing the following on each image pixel : (pixel -128)/128.
 - I did not take any further pre-processing steps as I wanted to see first the results with this normalization, and then come back if I needed more improvements in the classifier pipeline results.
 - Just for testing, I also implemented a grayscale conversion and I modified the code towards that goal (notebook chapter **"`Try Gray Scale conversion`"**.
-  - however I did not find any improvements using grayscale conversion so this step is currently disabled via a flag in the code : `is_converted_gray`
+  - however I did not find any improvements in the classifier pipeline performance using grayscale conversion so this step is currently disabled via a flag in the code : `is_converted_gray`
   - Depending on this flag, I adjust the channels input of the convolution pipeline, setting 3 channels for color images and 1 for grayscale images.
 
 Here is an example of a traffic sign image before and after grayscaling.
