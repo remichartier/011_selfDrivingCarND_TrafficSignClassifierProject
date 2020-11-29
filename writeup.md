@@ -96,22 +96,27 @@ I have not explored other ways yet due to time constraints and the need to move 
 
 My Model is covered in my notebook on chapter : **"`Model Architecture`"**
 
-My final model consisted of the following layers:
+It consists of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image (or 32x32x1 if grayscale) 							| 
 | Layer 1 : Convolution 01 (5x5)     	| 1x1 stride, VALID padding, Input = 32x32x3 or x1 if Grayscale. Output = 28x28x6.outputs 28x28x6 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  Input = 28x28x6. Output = 14x14x6 				|
+| Activation layer					|	RELU											|
+| Max pooling	layer      	| 2x2 stride,  Input = 28x28x6. Output = 14x14x6 				|
 | Layer 2 : Convolution 02 (5x5)	    | 1x1 stride, VALID padding, outputs 10x10x16      									|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  Input = 10x10x16. Output = 5x5x16				|
+| Activation layer					|	RELU											|
+| Max pooling	layer      	| 2x2 stride,  Input = 10x10x16. Output = 5x5x16				|
 | Flatten | Input = 5x5x16. Output = 400|
 | Layer 3: Fully Connected		| Input = 400. Output = 120.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Activation layer					|	RELU											|
+|	Dropout Layer					|	keep_prob = 0.75, to prevent overfitting											|
+| Layer 4: Fully Connected		| Input = 120. Output = 84.        									|
+| Activation layer					|	RELU											|
+|	Dropout Layer					|	keep_prob = 0.75, to prevent overfitting											|
+| Layer 5: Fully Connected		| Input = 84. Output = 43.       									|
+|	Dropout Layer					|	keep_prob = 0.75, to prevent overfitting											|
+
  
 
 
