@@ -249,62 +249,50 @@ Test Accuracy = 0.800
 
 
 - image 0, labelized : "Stop", got top 5 traffic sign predictions :
-
 |Probability|Prediction|
 |:--------:|:----:|
-|14.00|Stop|
-|3.00|Speed limit (60km/h)|
-|5.00|Speed limit (80km/h)|
-|15.00|No vehicles|
-|1.00|Speed limit (30km/h)|
-
-
+|1.000000|Stop|
+|0.000000|Speed limit (60km/h)|
+|0.000000|Speed limit (80km/h)|
+|0.000000|No vehicles|
+|0.000000|Speed limit (30km/h)|
 
 - image 1, labelized : "Priority road", got top 5 traffic sign predictions :
-
 |Probability|Prediction|
 |:--------:|:----:|
-|12.00|Priority road|
-|38.00|Keep right|
-|41.00|End of no passing|
-|14.00|Stop|
-|17.00|No entry|
-
-
+|1.000000|Priority road|
+|0.000000|Keep right|
+|0.000000|End of no passing|
+|0.000000|Stop|
+|0.000000|No entry|
 
 - image 2, labelized : "Yield", got top 5 traffic sign predictions :
-
 |Probability|Prediction|
 |:--------:|:----:|
-|13.00|Yield|
-|9.00|No passing|
-|15.00|No vehicles|
-|35.00|Ahead only|
-|34.00|Turn left ahead|
-
-
+|1.000000|Yield|
+|0.000000|No passing|
+|0.000000|No vehicles|
+|0.000000|Ahead only|
+|0.000000|Turn left ahead|
 
 - image 3, labelized : "Pedestrians", got top 5 traffic sign predictions :
-
 |Probability|Prediction|
 |:--------:|:----:|
-|15.00|No vehicles|
-|4.00|Speed limit (70km/h)|
-|2.00|Speed limit (50km/h)|
-|40.00|Roundabout mandatory|
-|26.00|Traffic signals|
-
-
+|0.980747|No vehicles|
+|0.007495|Speed limit (70km/h)|
+|0.004669|Speed limit (50km/h)|
+|0.003194|Roundabout mandatory|
+|0.002312|Traffic signals|
 
 - image 4, labelized : "Speed limit (70km/h)", got top 5 traffic sign predictions :
-
 |Probability|Prediction|
 |:--------:|:----:|
-|4.00|Speed limit (70km/h)|
-|0.00|Speed limit (20km/h)|
-|3.00|Speed limit (60km/h)|
-|15.00|No vehicles|
-|1.00|Speed limit (30km/h)|
+|0.988960|Speed limit (70km/h)|
+|0.008431|Speed limit (20km/h)|
+|0.002506|Speed limit (60km/h)|
+|0.000088|No vehicles|
+|0.000006|Speed limit (30km/h)|
+
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
