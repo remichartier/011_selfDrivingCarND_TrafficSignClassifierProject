@@ -18,11 +18,11 @@ The goals / steps of this project are the following:
 [image1]: ./writeup_images/0001_labelHistogram.png "Visualization"
 [image2]: ./writeup_images/0002_gray_conversion.png "Grayscaling"
 [image3]: ./writeup_images/0003_pixelValuesNormalization.png "Normalization"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image4]: ./webImages/01.png "Traffic Sign 1"
+[image5]: ./webImages/02.png "Traffic Sign 2"
+[image6]: ./webImages/03.png "Traffic Sign 3"
+[image7]: ./webImages/04.png "Traffic Sign 4"
+[image8]: ./webImages/05.png "Traffic Sign 5"
 
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
