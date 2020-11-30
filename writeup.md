@@ -238,10 +238,12 @@ Image prediction results :
 
 - image 4, labelized : "Speed limit (70km/h)", got top 5 traffic sign predictions :
 "Speed limit (70km/h)" > "Speed limit (20km/h)" > "Speed limit (60km/h)" > "No vehicles" > "Speed limit (30km/h)"
+
+Test Accuracy = 0.800
 ```
-
-
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+- The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. 
+  - It is within the range of the train/test/validation accuracies we have seen above.
+  - However, I had tried earlier with 10 epochs, I was only getting 3 pictures out of 5 well classified. Raising number of epochs to 20 made the accuracy of classifying those 5 images raise to 80%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
