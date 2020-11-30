@@ -140,6 +140,16 @@ I have not explored other ways yet due to time constraints and the need to move 
   
   But I recognize that if I want to explore further improvements, all the other choices/parameters would be available for me to try getting more accuracy improvements, especially optimizing the learning rate, exploring the optimizer other options, changing the Batch size, doing more testing with number of epochs and weight initialization parameters, extensive range of options on convolution networks kernel sizes, number of convolutions, activation functions choices, pooling functions, number of fully connected layers and sizes. List of other options is very long and opening for many avenues to either improve and worsen the classifier performance results, so I chose to limit myself to changing parameters I could logically see would improve results and reach the minimum passing test accuracy of 0.93.
 
+Note : 
+  1. I had to correct some code initially originated from the course on LeNet MNIST model, as the epoch loop is only running on the integer quotient of `len(X_data)` but not on the remainer of `len(X_data)/BATCH_SIZE`. That is why you may notice some modification in `evaluate()` and `Train the Model` chapter to calculate the `end` position of each batch.
+  ```
+  for offset in range(0, num_examples, BATCH_SIZE):
+            #end = offset + BATCH_SIZE # InvalidArgumentError: Incompatible shapes: [128] vs. [58]
+            # final batch may be less than BATCH_SIZE !!!!
+            end = min(offset + BATCH_SIZE,num_examples)
+            batch_x, batch_y = X_train[offset:end], y_train[offset:end]
+  ```
+
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 - This code is covered in my notebook chapters **"`Model Evaluation`"** as well as **"`Train the Model`"** as well as **"`Evaluate the Model`"**.
