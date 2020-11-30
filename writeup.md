@@ -246,6 +246,9 @@ Test Accuracy = 0.800
   - However, I had tried earlier with 10 epochs, I was only getting 3 pictures out of 5 well classified. Raising number of epochs to 20 made the accuracy of classifying those 5 images raise to 80%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+
+Those following table were generated via the function I developped `displaySoftmaxResults()`.
+
 - image 0, labelized : "Stop", got top 5 traffic sign predictions :
 
 |Probability|Prediction|
@@ -255,6 +258,8 @@ Test Accuracy = 0.800
 |0.000000|Speed limit (80km/h)|
 |0.000000|No vehicles|
 |0.000000|Speed limit (30km/h)|
+
+  - So for first image, the model is very confident it is a stop sign with a 1.0 probability, and no other sign predictions come even close to that number (They all indicate 0 but due to display precision but looking at real numbers they are all 19 to 20 decimals).
 
 - image 1, labelized : "Priority road", got top 5 traffic sign predictions :
 
@@ -266,6 +271,8 @@ Test Accuracy = 0.800
 |0.000000|Stop|
 |0.000000|No entry|
 
+  - Same observation for 2nd image,the model is very confident it is a priority way sign with a 1.0 probability, and no other sign predictions come even close to that number. So the model did well on this sign despite the tricky background with the back of a square sign.
+  
 - image 2, labelized : "Yield", got top 5 traffic sign predictions :
 
 |Probability|Prediction|
@@ -276,6 +283,8 @@ Test Accuracy = 0.800
 |0.000000|Ahead only|
 |0.000000|Turn left ahead|
 
+  - Same observation for the Yield sign, model is very confident with 1.0 probability.
+  
 - image 3, labelized : "Pedestrians", got top 5 traffic sign predictions :
 
 |Probability|Prediction|
@@ -286,6 +295,8 @@ Test Accuracy = 0.800
 |0.003194|Roundabout mandatory|
 |0.002312|Traffic signals|
 
+  - For 4th image which is a Pedestrians sign, model failed to recognize it. This one may be little tricky with its orientation. It does not even have Pedestrians in its top 5 probabilities.
+  
 - image 4, labelized : "Speed limit (70km/h)", got top 5 traffic sign predictions :
 
 |Probability|Prediction|
@@ -296,22 +307,9 @@ Test Accuracy = 0.800
 |0.000088|No vehicles|
 |0.000006|Speed limit (30km/h)|
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
+  - For 5th image, model is rather confident at 0.98 probability it is indeed Speed Limit 70km/h sign. Top 4 remaining predictions are low for other signs.
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-
+- This optional part is not done. I would prefer to move forward in the nanodegree courses and will come back to it after graduating, but I already visualized such Neural Network layer images in past courses.
