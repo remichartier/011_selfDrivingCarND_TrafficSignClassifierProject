@@ -249,6 +249,7 @@ Test Accuracy = 0.800
 
 
 - image 0, labelized : "Stop", got top 5 traffic sign predictions :
+
 |Probability|Prediction|
 |:--------:|:----:|
 |14.00|Stop|
@@ -260,6 +261,7 @@ Test Accuracy = 0.800
 
 
 - image 1, labelized : "Priority road", got top 5 traffic sign predictions :
+
 |Probability|Prediction|
 |:--------:|:----:|
 |12.00|Priority road|
@@ -271,6 +273,7 @@ Test Accuracy = 0.800
 
 
 - image 2, labelized : "Yield", got top 5 traffic sign predictions :
+
 |Probability|Prediction|
 |:--------:|:----:|
 |13.00|Yield|
@@ -282,6 +285,7 @@ Test Accuracy = 0.800
 
 
 - image 3, labelized : "Pedestrians", got top 5 traffic sign predictions :
+
 |Probability|Prediction|
 |:--------:|:----:|
 |15.00|No vehicles|
@@ -293,6 +297,7 @@ Test Accuracy = 0.800
 
 
 - image 4, labelized : "Speed limit (70km/h)", got top 5 traffic sign predictions :
+
 |Probability|Prediction|
 |:--------:|:----:|
 |4.00|Speed limit (70km/h)|
