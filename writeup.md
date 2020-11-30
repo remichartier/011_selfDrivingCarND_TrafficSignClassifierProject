@@ -207,15 +207,38 @@ Here are five German traffic signs that I found on the web:
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-Here are the results of the prediction:
+- In notebook chapter **"`Extract table to match label indexes with German sign names`"**, I extracted the table conversion (found in file `signnames.csv`) between German Sign Traffic codes and Traffic Sign Titles, and stored this conversion table in sign_table.
+- In notebook chapter **"`Load and Output the Images`"**, I labelized the 5 web images according to this conversion table and following the conversion I created : (stop,priorityRoad,yield,pedestrians,speedLimit70) = (14,12,13,27,4).
+```
+# --> Labelize data
+y_web = np.array([14,12,13,27,4])
+```
+- This allowed me to extract automatically a prediction table, via the output of :
+```
+        # prediction_softmax
+        if print_softmax :
+            top_softmax = sess.run(top_softmax_operation, feed_dict={x: batch_x, y: batch_y, keep_prob: 1})
+            displaySoftmaxResults(top_softmax,batch_y)
+```
+- I therefore obtained automatically a comparison between the images labels and the top 5 predictions for those images (cf notebook chapter **"`Output Top 5 Softmax Probabilities For Each Image Found on the Web`"**) :
+```
+Image prediction results :
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+- image 0, labelized : "Stop", got top 5 traffic sign predictions :
+"Stop" > "Speed limit (60km/h)" > "Speed limit (80km/h)" > "No vehicles" > "Speed limit (30km/h)"
+
+- image 1, labelized : "Priority road", got top 5 traffic sign predictions :
+"Priority road" > "Keep right" > "End of no passing" > "Stop" > "No entry"
+
+- image 2, labelized : "Yield", got top 5 traffic sign predictions :
+"Yield" > "No passing" > "No vehicles" > "Ahead only" > "Turn left ahead"
+
+- image 3, labelized : "Pedestrians", got top 5 traffic sign predictions :
+"No vehicles" > "Speed limit (70km/h)" > "Speed limit (50km/h)" > "Roundabout mandatory" > "Traffic signals"
+
+- image 4, labelized : "Speed limit (70km/h)", got top 5 traffic sign predictions :
+"Speed limit (70km/h)" > "Speed limit (20km/h)" > "Speed limit (60km/h)" > "No vehicles" > "Speed limit (30km/h)"
+```
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
