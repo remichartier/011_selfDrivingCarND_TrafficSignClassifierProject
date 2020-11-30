@@ -23,6 +23,7 @@ The goals / steps of this project are the following:
 [image6]: ./webImages/03.png "Traffic Sign 3"
 [image7]: ./webImages/04.png "Traffic Sign 4"
 [image8]: ./webImages/05.png "Traffic Sign 5"
+[image9]: ./writeup_images/0004_randomImagesTrainingSet.png "Random images"
 
 ## Rubric Points
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -41,6 +42,9 @@ Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/4
   - The size of test set is 12630
   - The shape of a traffic sign image is (32, 32, 3)
   - The number of unique classes/labels in the data set is 43
+  
+- Below are examples of images chosen randomly in the training set : 
+![alt text][image9]
 
 #### 2. Include an exploratory visualization of the dataset.
 
