@@ -249,7 +249,7 @@ Test Accuracy = 0.800
 
 Those following table were generated via the function I developped `displaySoftmaxResults()`.
 
-- image 0, labelized : "Stop", got top 5 traffic sign predictions :
+##### image 0, labelized : "Stop", got top 5 traffic sign predictions :
 
 |Probability|Prediction|
 |:--------:|:----:|
@@ -259,9 +259,9 @@ Those following table were generated via the function I developped `displaySoftm
 |0.000000|No vehicles|
 |0.000000|Speed limit (30km/h)|
 
-  - So for first image, the model is very confident it is a stop sign with a 1.0 probability, and no other sign predictions come even close to that number (They all indicate 0 but due to display precision but looking at real numbers they are all 19 to 20 decimals).
+- So for first image, the model is very confident it is a stop sign with a 1.0 probability, and no other sign predictions come even close to that number (They all indicate 0 but due to display precision but looking at real numbers they are all 19 to 20 decimals).
 
-- image 1, labelized : "Priority road", got top 5 traffic sign predictions :
+#####  image 1, labelized : "Priority road", got top 5 traffic sign predictions :
 
 |Probability|Prediction|
 |:--------:|:----:|
@@ -271,9 +271,9 @@ Those following table were generated via the function I developped `displaySoftm
 |0.000000|Stop|
 |0.000000|No entry|
 
-  - Same observation for 2nd image,the model is very confident it is a priority way sign with a 1.0 probability, and no other sign predictions come even close to that number. So the model did well on this sign despite the tricky background with the back of a square sign.
+- Same observation for 2nd image,the model is very confident it is a priority way sign with a 1.0 probability, and no other sign predictions come even close to that number. So the model did well on this sign despite the tricky background with the back of a square sign.
   
-- image 2, labelized : "Yield", got top 5 traffic sign predictions :
+##### image 2, labelized : "Yield", got top 5 traffic sign predictions :
 
 |Probability|Prediction|
 |:--------:|:----:|
@@ -283,9 +283,9 @@ Those following table were generated via the function I developped `displaySoftm
 |0.000000|Ahead only|
 |0.000000|Turn left ahead|
 
-  - Same observation for the Yield sign, model is very confident with 1.0 probability.
+- Same observation for the Yield sign, model is very confident with 1.0 probability.
   
-- image 3, labelized : "Pedestrians", got top 5 traffic sign predictions :
+##### image 3, labelized : "Pedestrians", got top 5 traffic sign predictions :
 
 |Probability|Prediction|
 |:--------:|:----:|
@@ -295,9 +295,9 @@ Those following table were generated via the function I developped `displaySoftm
 |0.003194|Roundabout mandatory|
 |0.002312|Traffic signals|
 
-  - For 4th image which is a Pedestrians sign, model failed to recognize it. This one may be little tricky with its orientation. It does not even have Pedestrians in its top 5 probabilities.
+- For 4th image which is a Pedestrians sign, model failed to recognize it. This one may be little tricky with its orientation. It does not even have Pedestrians in its top 5 probabilities.
   
-- image 4, labelized : "Speed limit (70km/h)", got top 5 traffic sign predictions :
+##### image 4, labelized : "Speed limit (70km/h)", got top 5 traffic sign predictions :
 
 |Probability|Prediction|
 |:--------:|:----:|
@@ -307,7 +307,7 @@ Those following table were generated via the function I developped `displaySoftm
 |0.000088|No vehicles|
 |0.000006|Speed limit (30km/h)|
 
-  - For 5th image, model is rather confident at 0.98 probability it is indeed Speed Limit 70km/h sign. Top 4 remaining predictions are low for other signs.
+- For 5th image, model is rather confident at 0.98 probability it is indeed Speed Limit 70km/h sign. Top 4 remaining predictions are low for other signs.
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
