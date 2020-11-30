@@ -247,6 +247,60 @@ Test Accuracy = 0.800
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
+
+- image 0, labelized : "Stop", got top 5 traffic sign predictions :
+|Probability|Prediction|
+|:--------:|:----:|
+|14.00|Stop|
+|3.00|Speed limit (60km/h)|
+|5.00|Speed limit (80km/h)|
+|15.00|No vehicles|
+|1.00|Speed limit (30km/h)|
+
+
+
+- image 1, labelized : "Priority road", got top 5 traffic sign predictions :
+|Probability|Prediction|
+|:--------:|:----:|
+|12.00|Priority road|
+|38.00|Keep right|
+|41.00|End of no passing|
+|14.00|Stop|
+|17.00|No entry|
+
+
+
+- image 2, labelized : "Yield", got top 5 traffic sign predictions :
+|Probability|Prediction|
+|:--------:|:----:|
+|13.00|Yield|
+|9.00|No passing|
+|15.00|No vehicles|
+|35.00|Ahead only|
+|34.00|Turn left ahead|
+
+
+
+- image 3, labelized : "Pedestrians", got top 5 traffic sign predictions :
+|Probability|Prediction|
+|:--------:|:----:|
+|15.00|No vehicles|
+|4.00|Speed limit (70km/h)|
+|2.00|Speed limit (50km/h)|
+|40.00|Roundabout mandatory|
+|26.00|Traffic signals|
+
+
+
+- image 4, labelized : "Speed limit (70km/h)", got top 5 traffic sign predictions :
+|Probability|Prediction|
+|:--------:|:----:|
+|4.00|Speed limit (70km/h)|
+|0.00|Speed limit (20km/h)|
+|3.00|Speed limit (60km/h)|
+|15.00|No vehicles|
+|1.00|Speed limit (30km/h)|
+
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
