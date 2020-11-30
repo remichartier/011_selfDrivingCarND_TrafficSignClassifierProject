@@ -246,9 +246,8 @@ Test Accuracy = 0.800
   - However, I had tried earlier with 10 epochs, I was only getting 3 pictures out of 5 well classified. Raising number of epochs to 20 made the accuracy of classifying those 5 images raise to 80%.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
-
-
 - image 0, labelized : "Stop", got top 5 traffic sign predictions :
+
 |Probability|Prediction|
 |:--------:|:----:|
 |1.000000|Stop|
@@ -258,6 +257,7 @@ Test Accuracy = 0.800
 |0.000000|Speed limit (30km/h)|
 
 - image 1, labelized : "Priority road", got top 5 traffic sign predictions :
+
 |Probability|Prediction|
 |:--------:|:----:|
 |1.000000|Priority road|
@@ -267,6 +267,7 @@ Test Accuracy = 0.800
 |0.000000|No entry|
 
 - image 2, labelized : "Yield", got top 5 traffic sign predictions :
+
 |Probability|Prediction|
 |:--------:|:----:|
 |1.000000|Yield|
@@ -276,6 +277,7 @@ Test Accuracy = 0.800
 |0.000000|Turn left ahead|
 
 - image 3, labelized : "Pedestrians", got top 5 traffic sign predictions :
+
 |Probability|Prediction|
 |:--------:|:----:|
 |0.980747|No vehicles|
@@ -285,6 +287,7 @@ Test Accuracy = 0.800
 |0.002312|Traffic signals|
 
 - image 4, labelized : "Speed limit (70km/h)", got top 5 traffic sign predictions :
+
 |Probability|Prediction|
 |:--------:|:----:|
 |0.988960|Speed limit (70km/h)|
@@ -292,7 +295,6 @@ Test Accuracy = 0.800
 |0.002506|Speed limit (60km/h)|
 |0.000088|No vehicles|
 |0.000006|Speed limit (30km/h)|
-
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
