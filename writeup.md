@@ -134,7 +134,7 @@ I have not explored other ways yet due to time constraints and the need to move 
   
   I recognize that I could have played with all those parameters/choices to improve validation accuracy performance. However, so far, the only parameter I played with in order to reach the minimul test accuracy target of 0.93 was to change the number of epochs from 10 to 20.
   
-  But I recognize that if I want to explore further improvements, all the other choices/parameters would be available for me to try getting more accuracy improvements, especially optimizing the learning rate, exploring the optimizer other options, changing the Batch size and doing more testing with number of epochs and weight initialization parameters.
+  But I recognize that if I want to explore further improvements, all the other choices/parameters would be available for me to try getting more accuracy improvements, especially optimizing the learning rate, exploring the optimizer other options, changing the Batch size, doing more testing with number of epochs and weight initialization parameters, extensive range of options on convolution networks kernel sizes, number of convolutions, activation functions choices, pooling functions, number of fully connected layers and sizes. List of other options is very long and opening for many avenues to either improve and worsen the classifier performance results, so I chose to limit myself to changing parameters I could logically see would improve results and reach the minimum passing test accuracy of 0.93.
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -171,7 +171,7 @@ EPOCH 18 ...Train Accuracy = 0.940...Validation Accuracy = 0.939
 EPOCH 19 ...Train Accuracy = 0.933...Validation Accuracy = 0.935
 EPOCH 20 ...Train Accuracy = 0.934...Validation Accuracy = 0.947
 
-Test Accuracy = 0.939
+Test Accuracy = 0.934
 ```
 
 Iterative approach followed :
@@ -185,22 +185,7 @@ Iterative approach followed :
     - Those steps were enough to go from an accuracy validaton of 0.87 to 0.94/0.95.
 * I also increased number of Epochs from 10 to 20 to keep accuracy validation around 0.94/0.95.
 
-
-How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-
-- Modifications I made from LeNet MNIST model to improve accuracy : 
-  - I added regularization between Fully Connected layers, to prevent overfitting, and only activated during trainings, not for validation or testing phases.
-    - I tested starting from keep_drop = 0.5, first after Layer 5 Fully Connected, then also after Layer 4 and Layer 3 as I saw consistent improvements in accuracy validation results.
-    - I then increase the keep_drop rate from 0.5 to 0.75 as I also saw consistent improvements doing so on accuracy validation performance.
-    - Those steps were enough to go from an accuracy validaton of 0.87 to 0.94/0.95.
-    - I increased number of Epochs from 10 to 20 to keep accuracy validation around 0.94/0.95.
+* At the end, I can see that train_accuracy and validation_accuracy numbers are pretty similar over all epochs starting Epoch # 2, so overfitting does not see to be a big issue with the model and parameters chosen. And test_accuracy stays as well in close range of validation and train accuracy.
 
 
 ### Test a Model on New Images
