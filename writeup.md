@@ -197,7 +197,9 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+- All those images found on the web are pretty clear, in day light, with bright colors, so the model should be pretty good at classifying them.
+- Last image (Pedestrian sign) is slightly oriented and rotated so it may be a challenge to classify.
+- Second image (Priority Way) may also be challenging because it has the back of a square sign in its background, it may be a source of mis-classification.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
