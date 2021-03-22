@@ -3,7 +3,7 @@
 
 Overview
 ---
-In this project, use learnings about deep neural networks and convolutional neural networks to classify traffic signs. T
+In this project, use learnings about deep neural networks and convolutional neural networks to classify traffic signs.
 - Train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). 
 - After the model is trained, try out model on images of German traffic signs found on the web.
 - Based on initial Ipython notebook starter code @ [Ipython notebook](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb). 
